@@ -39,6 +39,7 @@ PLATFORMS
 DEPENDENCIES
   codeclimate-test-reporter
   rspec
+  simplecov
   sinatra
 
 BUNDLED WITH
