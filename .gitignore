@@ -1,3 +1,3 @@
-.DS_Source
-.bundle
+.DS_Store
+.bundle/
 coverage/
