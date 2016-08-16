@@ -9,6 +9,8 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    redcarpet (3.3.4)
+    rouge (2.0.5)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -35,9 +37,12 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   codeclimate-test-reporter
+  redcarpet
+  rouge
   rspec
   simplecov
   sinatra

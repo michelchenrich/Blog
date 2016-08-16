@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 gem 'sinatra', require: 'sinatra/base'
+gem 'redcarpet'
+gem 'rouge'
 
 group :test, :development do
   gem 'rspec'
