@@ -1,0 +1,16 @@
+languages:
+  Ruby: true
+  JavaScript: true
+exclude_paths:
+- "lib/public/js/bootstrap.min.js"
+- "lib/public/js/jquery.min.js"
+- "lib/public/fonts/"
+- "lib/public/css/bootstrap.min.css"
+- "lib/public/css/bootstrap-theme.min.css"
+- "content/"
+- "README.md"
+- "Gemfile"
+- "Gemfile.lock"
+- ".travis.yml"
+- "config.ru"
+- ".gitignore"
