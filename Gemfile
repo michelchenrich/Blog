@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'sinatra', require: 'sinatra/base'
 gem 'redcarpet'
 gem 'rouge'
+gem 'rest-client'
 
 group :test, :development do
   gem 'rspec'

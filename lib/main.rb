@@ -1,9 +1,6 @@
 require 'bundler'
 Bundler.require :default, ENV['RACK_ENV']
 require_relative './session'
-
-require 'redcarpet'
-require 'rouge'
 require 'rouge/plugins/redcarpet'
 
 class HTML < Redcarpet::Render::HTML
@@ -24,6 +21,7 @@ class Main < Sinatra::Application
   end
 
   get '/' do
+    content_request = RestClient.get "#{ENV['CONTENT_URL']}/first_post"
     erb :index, locals: {user: session_status, css: Rouge::Themes::Github.render} do
       Redcarpet::Markdown.new(HTML, {
         autolink: true,
@@ -32,7 +30,7 @@ class Main < Sinatra::Application
         disable_indented_code_blocks: true,
         underline: true,
         line_numbers: true
-      }).render(File.read("#{__dir__}/../content/first_post.md").force_encoding("utf-8"))
+      }).render(content_request.to_str)
     end
   end
 
