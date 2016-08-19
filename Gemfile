@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'sinatra', require: 'sinatra/base'
+gem 'pygments.rb'
 gem 'redcarpet'
-gem 'rouge'
 gem 'rest-client'
 
 group :test, :development do

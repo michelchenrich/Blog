@@ -15,6 +15,10 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     netrc (0.11.0)
+    posix-spawn (0.3.11)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -28,7 +32,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rouge (2.0.5)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -56,6 +59,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unf_ext (0.0.7.2-x64-mingw32)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -63,9 +67,9 @@ PLATFORMS
 
 DEPENDENCIES
   codeclimate-test-reporter
+  pygments.rb
   redcarpet
   rest-client
-  rouge
   rspec
   simplecov
   sinatra

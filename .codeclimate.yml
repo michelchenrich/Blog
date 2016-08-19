@@ -2,12 +2,9 @@ languages:
   Ruby: true
   JavaScript: true
 exclude_paths:
-- "lib/public/js/bootstrap.min.js"
-- "lib/public/js/jquery.min.js"
 - "lib/public/fonts/"
-- "lib/public/css/bootstrap.min.css"
-- "lib/public/css/bootstrap-theme.min.css"
-- "content/"
+- "lib/public/css/bootstrap.css"
+- "lib/public/css/highlight.css"
 - "README.md"
 - "Gemfile"
 - "Gemfile.lock"
