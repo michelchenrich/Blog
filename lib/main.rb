@@ -11,8 +11,7 @@ class Main < Sinatra::Application
   before do
     @session = Session.new self
     @content = Content.new Renderer.new
-    @report = Report.new
-    @reporter = Reporter.new @report
+    @reporter = Reporter.new Report.new
   end
 
   get '/' do
@@ -25,11 +24,10 @@ class Main < Sinatra::Application
 
   get '/:post' do
     @reporter.report request
-    page = @content.page params[:post]
     if request.env['X_MOBILE_DEVICE']
-      erb :mobile_post, locals: page
+      erb :mobile_post, locals: { post: @content.post(params[:post]) }
     else
-      erb :full_page, locals: page
+      erb :full_page, locals: @content.page(params[:post])
     end
   end
 end

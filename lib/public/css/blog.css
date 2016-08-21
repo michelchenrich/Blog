@@ -58,11 +58,10 @@ div.pane {
   background-color: #fdf6e3;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 100%;
+  min-height: 100%;
 }
 div.pane a {
   color: #1d1603;
-  text-decoration: none;
   width: 100%;
 }
 div.pane a:hover {
@@ -104,8 +103,9 @@ div.index > ul > li {
   padding: 2px 4px;
   margin-bottom: 5px;
 }
-div.pane > ul > li > a {
+div.index > ul > li > a {
   display: inline-block;
+  text-decoration: none;
 }
 
 /*Table Formatting*/
