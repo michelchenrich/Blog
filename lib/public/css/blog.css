@@ -26,11 +26,11 @@ a.brand {
   position: relative;;
   top: -4px;
 }
-@media all and (max-width: 401px) {
+@media screen and (max-width: 401px) {
   .small { display: initial; }
   .big { display: none; }
 }
-@media all and (min-width: 402px) {
+@media screen and (min-width: 402px) {
   .small { display: none; }
   .big { display: initial; }
 }
