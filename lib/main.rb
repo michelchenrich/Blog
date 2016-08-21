@@ -18,9 +18,7 @@ class Main < Sinatra::Application
 
   get '/:page_name' do
     page = @content.page params[:page_name]
-    erb :index do
-      @presenter.present(page)
-    end
+    erb(:index) { @presenter.present page }
   end
 
   get '/login' do
