@@ -1,17 +1,173 @@
-code {
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ede6d3;
+}
+div.top {
+  color: #fdf6e3;
+  background-color: #1d1603;
+  box-shadow: 0px 5px 10px 5px #cdc6b3;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  position: absolute;;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+a.brand {
+  font-variant: small-caps;
+  color: #fdf6e3;
+  text-decoration: none;
+  font-size: 32px;
+  margin-right: 10px;
+}
+a.brand:hover {
+  color: #cdc6b3;
+}
+a.icon-link > svg {
+  fill: #fdf6e3;
+  margin-right: 10px;
+}
+a.icon-link, a.icon-link:hover, a.brand:hover {
+  text-decoration: none;
+}
+a.icon-link > svg:hover {
+  fill: #cdc6b3;
+}
+div.pane {
+  top: 80px;
+  position: absolute;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  box-shadow: 0px 5px 10px 5px #cdc6b3;
+  background-color: #fdf6e3;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 100%;
+}
+div.index {
+  width: 200px;
+  font-size: 16px;
+  left: 15px;
+}
+div.post {
+  left: 270px;
+  right: 15px;
+  color: #1d1603;
+  font-size: 18px;
+  line-height: 1.42857143;
+}
+div.index > ul {
+  padding-left: 20px;
+}
+div.index > ul > li {
   padding: 2px 4px;
-  font-size: 90%;
-  color: #93a1a1;
-  background-color: #002b36;
+  margin-bottom: 5px;
+}
+div.index > ul > li > a {
+  color: #1d1603;
+  text-decoration: none;
+}
+div.index > ul > li:hover {
+  color: #3d3623;
+  background-color: #ede6d3;
+  border-radius: 4px;
+}
+
+/*Table Formatting*/
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #777777;
+  text-align: left;
+}
+th {
+  text-align: left;
+}
+table {
+  box-shadow: 0px 1px 10px 2px #cdc6b3;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: #ede6d3;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 6px;
+}
+table > tbody > tr:nth-of-type(odd) {
+  background-color: #f7f0dd;
+}
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+table > thead {
+  border-bottom: 1px solid #1d1603;
+}
+table > thead > tr > th,
+table > thead > tr > td {
+  vertical-align: bottom;
+  border-bottom-width: 2px;
+}
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
+}
+
+/*Code Highlight*/
+code {
+  box-shadow: 0px 1px 3px 1px #cdc6b3;
+  padding: 2px 4px;
+  font-size: 85%;
+  color: #3d3623;
+  background-color: #ede6d3;
   border-radius: 4px;
 }
 pre {
   display: block;
   padding: 12px;
+  overflow: auto;
+}
+code,
+pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+table.highlighttable > tbody,
+table.highlighttable > tbody > tr,
+table.highlighttable > tbody > tr > td {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
 }
 .highlighttable {
   background-color: #002b36;
   color: #93a1a1;
+  border: none;
   border-collapse: separate;
   border-radius: 10px;
   line-height: 1.42857143;

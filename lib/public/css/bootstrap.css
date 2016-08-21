@@ -3,16 +3,6 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
-/*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=e9ea98e648d1de51485e11ed9ec4a57c)
- * Config saved to config.json and https://gist.github.com/e9ea98e648d1de51485e11ed9ec4a57c
- */
-/*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -108,16 +98,6 @@ hr {
           box-sizing: content-box;
   height: 0;
 }
-pre {
-  overflow: auto;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
 button,
 input,
 optgroup,
@@ -189,14 +169,6 @@ textarea {
 optgroup {
   font-weight: bold;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -214,10 +186,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.42857143;
-  color: #586e75;
-  background-color: #fdf6e3;
+  background-color: #ede6d3;
 }
 input,
 button,
@@ -653,12 +622,6 @@ address {
   margin-bottom: 25px;
   font-style: normal;
   line-height: 1.42857143;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 kbd {
   padding: 2px 4px;
