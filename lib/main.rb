@@ -1,33 +1,35 @@
 require_relative './libraries'
 require_relative './session'
 require_relative './content'
-require_relative './presenter'
+require_relative './renderer'
+require_relative './reporter'
+require_relative './report'
 
 class Main < Sinatra::Application
   set sessions: true
 
   before do
     @session = Session.new self
-    @content = Content.new
-    @presenter = Presenter.new
+    @content = Content.new Renderer.new
+    @report = Report.new
+    @reporter = Reporter.new @report
   end
 
   get '/' do
-    redirect('/first_post')
+    redirect('/welcome')
   end
 
-  get '/:page_name' do
-    page = @content.page params[:page_name]
-    erb(:index) { @presenter.present page }
+  get '/mobile/index' do
+    erb :mobile_index, locals: { index: @content.index }
   end
 
-  get '/login' do
-    @session.log_in
-    redirect '/'
-  end
-
-  get '/logout' do
-    @session.log_out
-    redirect '/'
+  get '/:post' do
+    @reporter.report request
+    page = @content.page params[:post]
+    if request.env['X_MOBILE_DEVICE']
+      erb :mobile_post, locals: page
+    else
+      erb :full_page, locals: page
+    end
   end
 end

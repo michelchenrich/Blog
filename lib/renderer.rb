@@ -1,5 +1,5 @@
-class Presenter
-  def present page
+class Renderer
+  def render page
     Redcarpet::Markdown.new(PygmentsHTML, {
       autolink: true,
       tables: true,

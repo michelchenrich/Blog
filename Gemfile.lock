@@ -20,6 +20,8 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
     rack (1.6.4)
+    rack-mobile-detect (0.4.0)
+      rack
     rack-protection (1.5.3)
       rack
     redcarpet (3.3.4)
@@ -67,7 +69,9 @@ PLATFORMS
 
 DEPENDENCIES
   codeclimate-test-reporter
+  json
   pygments.rb
+  rack-mobile-detect
   redcarpet
   rest-client
   rspec

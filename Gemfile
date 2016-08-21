@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
+gem 'rack-mobile-detect', require: 'rack/mobile-detect'
 gem 'sinatra', require: 'sinatra/base'
 gem 'pygments.rb'
 gem 'redcarpet'
 gem 'rest-client'
+gem 'json'
 
 group :test, :development do
   gem 'rspec'
