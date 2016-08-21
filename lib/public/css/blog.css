@@ -1,8 +1,7 @@
-html { height: 100%; }
+html, body { height: 100%; }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ede6d3;
-  height: 100%;
 }
 div.top {
   color: #fdf6e3;
@@ -15,7 +14,6 @@ div.top {
   top: 0px;
   left: 0px;
   right: 0px;
-  overflow-x: scroll;
 }
 a.brand {
   font-variant: small-caps;
@@ -77,6 +75,7 @@ div.post {
   color: #1d1603;
   font-size: 18px;
   line-height: 1.42857143;
+  overflow-y: auto;
 }
 div.before-post {
   width: 200px;
@@ -182,8 +181,7 @@ code {
 }
 pre {
   display: block;
-  padding: 12px;
-  overflow: auto;
+  padding: 10px;
 }
 code,
 pre {
