@@ -53,7 +53,6 @@ body {
 .pane {
   top: 80px;
   position: absolute;
-  min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
@@ -69,7 +68,7 @@ body {
   width: 100%;
 }
 .pane a:hover {
-  box-shadow: 0px 1px 3px 1px #cdc6b3;
+  box-shadow: 0 1px 3px 1px #cdc6b3;
   color: #3d3623;
   background-color: #ede6d3;
   border-radius: 4px;
