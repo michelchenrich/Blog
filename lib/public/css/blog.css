@@ -2,19 +2,19 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ede6d3;
 }
-div.top {
+.top {
   color: #fdf6e3;
   background-color: #1d1603;
-  box-shadow: 0px 3px 10px 5px #cdc6b3;
+  box-shadow: 0 3px 10px 5px #cdc6b3;
   padding-top: 15px;
   padding-left: 10px;
   padding-bottom: 10px;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-a.brand {
+.brand {
   font-variant: small-caps;
   color: #fdf6e3;
   text-decoration: none;
@@ -27,90 +27,90 @@ a.brand {
   /* Small screens */
   .small { display: initial; }
   .big { display: none; }
-  div.post { font-size: 14px; }
-  div.index { font-size: 14px; }
+  .post { font-size: 14px; }
+  .index { font-size: 14px; }
 }
 @media screen and (min-width: 402px) {
   /* Big screens */
   .small { display: none; }
   .big { display: initial; }
-  div.post { font-size: 18px; }
-  div.index { font-size: 16px; }
+  .post { font-size: 18px; }
+  .index { font-size: 16px; }
 }
-a.brand:hover {
+.brand:hover {
   color: #cdc6b3;
 }
-a.icon-link > svg {
+.icon-link > svg {
   fill: #fdf6e3;
   margin-right: 10px;
 }
-a.icon-link, a.icon-link:hover, a.brand:hover {
+.icon-link, .icon-link:hover, .brand:hover {
   text-decoration: none;
 }
-a.icon-link > svg:hover {
+.icon-link > svg:hover {
   fill: #cdc6b3;
 }
-div.pane {
+.pane {
   top: 80px;
   position: absolute;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
-  box-shadow: 0px 2px 10px 5px #cdc6b3;
+  box-shadow: 0 2px 10px 5px #cdc6b3;
   background-color: #fdf6e3;
   min-height: 84%;
   border-radius: 15px;
   margin-bottom: 15px;
   color: #4e3d0e;
 }
-div.pane a {
+.pane a {
   color: #1d1603;
   width: 100%;
 }
-div.pane a:hover {
+.pane a:hover {
   box-shadow: 0px 1px 3px 1px #cdc6b3;
   color: #3d3623;
   background-color: #ede6d3;
   border-radius: 4px;
 }
-div.post {
+.post {
   line-height: 1.42857143;
   overflow-y: auto;
 }
-div.before-post {
+.before-post {
   width: 200px;
   left: 15px;
 }
-div.after-index {
+.after-index {
   left: 270px;
   right: 15px;
 }
-div.single {
+.single {
   left: 5px;
   right: 5px;
 }
-div.post > h1 {
+h1 {
   padding-bottom: 10px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 10px;
   border-bottom: 1px solid #cdc6b3;
 }
-div.index > ul {
+.index > ul {
   padding-left: 20px;
 }
-div.index > ul > li {
+.index > ul > li {
   padding: 2px 4px;
   margin-bottom: 5px;
 }
-div.index > ul > li > a {
+.index > ul > li > a {
   display: inline-block;
   text-decoration: none;
 }
 blockquote {
   border-left: 3px solid #bdb6a3;
   box-shadow: -1px 1px 3px 1px #cdc6b3;
-  margin: 0px;
+  margin: 0;
   padding-left: 30px;
   background-color: #ede6d3;
   padding-top: 1px;
@@ -123,7 +123,7 @@ th {
   text-align: left;
 }
 table {
-  box-shadow: 0px 1px 10px 2px #cdc6b3;
+  box-shadow: 0 1px 10px 2px #cdc6b3;
   max-width: 100%;
   margin-bottom: 20px;
   background-color: #ede6d3;
@@ -151,7 +151,7 @@ table > thead {
 
 /*Code Highlight*/
 code {
-  box-shadow: 0px 1px 3px 1px #cdc6b3;
+  box-shadow: 0 1px 3px 1px #cdc6b3;
   padding: 2px 4px;
   font-size: 85%;
   color: #8a7f61;
@@ -171,7 +171,7 @@ table.highlighttable > tbody > tr,
 table.highlighttable > tbody > tr > td {
   background-color: transparent;
   border: none;
-  padding: 0px;
+  padding: 0;
 }
 .highlighttable {
   background-color: #002b36;

@@ -1,13 +1,15 @@
 languages:
   Ruby: true
-  JavaScript: true
 exclude_paths:
-- "lib/public/fonts/"
-- "lib/public/css/bootstrap.css"
-- "lib/public/css/highlight.css"
 - "README.md"
 - "Gemfile"
 - "Gemfile.lock"
 - ".travis.yml"
 - "config.ru"
 - ".gitignore"
+engines:
+  csslint:
+    enabled: true
+    checks:
+      qualified-headings:
+        enabled: false
