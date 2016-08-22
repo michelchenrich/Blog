@@ -12,7 +12,7 @@ class Main < Sinatra::Application
   before do
     @session = Session.new self
     @content = Content.new Renderer.new
-    @reporter = Reporter.new Report.new
+    @reporter = Reporter.new self, Report.new
     @presenter = Presenter.new self, @content
   end
 
@@ -29,7 +29,7 @@ class Main < Sinatra::Application
   end
 
   get '/:post' do
-    @reporter.report request
+    @reporter.report
     @presenter.present_post params[:post]
   end
 end
