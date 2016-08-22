@@ -4,6 +4,7 @@ require_relative './content'
 require_relative './renderer'
 require_relative './reporter'
 require_relative './report'
+require_relative './presenter'
 
 class Main < Sinatra::Application
   set sessions: true
@@ -12,22 +13,23 @@ class Main < Sinatra::Application
     @session = Session.new self
     @content = Content.new Renderer.new
     @reporter = Reporter.new Report.new
+    @presenter = Presenter.new self, @content
   end
 
   get '/' do
-    redirect('/welcome')
+    redirect '/welcome'
   end
 
-  get '/mobile/index' do
-    erb :mobile_index, locals: { index: @content.index }
+  get '/resource/:name' do
+    redirect @content.resource_url(params[:name])
+  end
+
+  get '/index' do
+    @presenter.present_index
   end
 
   get '/:post' do
     @reporter.report request
-    if request.env['X_MOBILE_DEVICE']
-      erb :mobile_post, locals: { post: @content.post(params[:post]) }
-    else
-      erb :full_page, locals: @content.page(params[:post])
-    end
+    @presenter.present_post params[:post]
   end
 end

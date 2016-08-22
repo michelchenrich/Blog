@@ -8,7 +8,7 @@ class Content
   end
 
   def post name
-    content_request = RestClient.get "#{ENV['CONTENT_URL']}/#{name}.md"
+    content_request = RestClient.get "#{content_url}/#{name}.md"
     @renderer.render content_request.to_str
   end
 
@@ -16,5 +16,13 @@ class Content
     index_thread = Thread.new { index }
     post_thread = Thread.new { post name }
     { index: index_thread.join.value, post: post_thread.join.value }
+  end
+
+  def resource_url name
+    "#{content_url}/resource/#{name}"
+  end
+
+  def content_url
+    ENV['CONTENT_URL']
   end
 end
