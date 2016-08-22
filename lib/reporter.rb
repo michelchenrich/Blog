@@ -5,7 +5,7 @@ class Reporter
 
   def report request
     Thread.new do
-      response = RestClient.get "https://freegeoip.net/json/#{request.ip}"
+      response = RestClient.get "https://freegeoip.net/json/#{request.remote_ip}"
       location = JSON.parse(response.body)
       @report.add location, DateTime.now
     end
